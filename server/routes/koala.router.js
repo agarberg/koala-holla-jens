@@ -30,7 +30,9 @@ koalaRouter.post('/', (req, res) => {
     const newKoala = (req.body)
     console.log(newKoala);
     
-    const queryText = '';
+    const queryText = `
+    INSERT INTO "allKoalas"
+    `;
 
     // console.log(req.body); --- original code
 

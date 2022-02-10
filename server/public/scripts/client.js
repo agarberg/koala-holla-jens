@@ -10,22 +10,24 @@ $( document ).ready( function(){
 }); // end doc ready
 
 function setupClickListeners() {
-  $( '#addButton' ).on( 'click', function(){
+  $( '#addButton' ).on( 'click', postKoala);
     console.log( 'in addButton on click' );
     // get user input and put in an object
     // NOT WORKING YET :(
     // using a test object
-    let koalaToSend = {
-      name: 'testName',
-      age: 'testName',
-      gender: 'testName',
-      readyForTransfer: 'testName',
-      notes: 'testName',
-    };
-    // call saveKoala with the new obejct
-    saveKoala( koalaToSend );
-  }); 
-}
+
+    // old code below
+//     let koalaToSend = {
+//       name: 'testName',
+//       age: 'testName',
+//       gender: 'testName',
+//       readyForTransfer: 'testName',
+//       notes: 'testName',
+//     };
+//     // call saveKoala with the new obejct
+//     saveKoala( koalaToSend );
+//   }); 
+// }
 
 function getKoalas(){
   console.log( 'in getKoalas' );
@@ -79,6 +81,8 @@ function postKoala() {
       $('#notesIn').val('')
 
       // append to DOM with a function here
+      getKoalas();
+
 
     }).catch(function(error) {
       console.log('Error in POST postKoala()', error)
