@@ -29,9 +29,25 @@ function setupClickListeners() {
 
 function getKoalas(){
   console.log( 'in getKoalas' );
-  // ajax call to server to get koalas
-  
-} // end getKoalas
+  $.ajax({
+    type: 'GET',
+    url: '/koala'
+  }).then(function(response) {
+    console.log(response);
+    for (let i= 0; i<response.length; i++){ 
+      $('#viewKoalas').append(`
+        <td>${response[i].name}</td>
+        <td>${response[i].age}</td>
+        <td>${response[i].gender}</td>
+        <td>${response[i].ready-for-transfer}</td>
+        <td>${response[i].notes}</td>
+        <td><button class="btn-delete" data-id=${response[i].id}>Delete</button>
+        <button class="btn-ready" data-id=${response[i].id}>Ready for Transfer</button></td>
+  `)}.catch(function(error){
+    console.log('error in GET', error);
+  });
+}
+ // end getKoalas
 
 function saveKoala( newKoala ){
   console.log( 'in saveKoala', newKoala );
