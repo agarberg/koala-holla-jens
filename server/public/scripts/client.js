@@ -38,3 +38,35 @@ function saveKoala( newKoala ){
   // ajax call to server to get koalas
  
 }
+
+
+
+
+function postKoala() {
+  let koalaToAdd = {
+    name: $('#nameIn').val(),
+    age: $('#ageIn').val(),
+    gender: $('#genderIn').val(),
+    transfer: $('#readyForTransferIn').val(),
+    notes: $('#notesIn').val()
+  }
+  $.ajax({
+    type: 'POST',
+    url: '/koalas',
+    data: koalaToAdd,
+    }).then(function(response) {
+      console.log('Response from server.', response);
+      //empty inputs
+      $('#nameIn').val(''),
+      $('#ageIn').val(''),
+      $('#genderIn').val(''),
+      $('#readyForTransferIn').val(''),
+      $('#notesIn').val('')
+
+      // append to DOM with a function here
+
+    }).catch(function(error) {
+      console.log('Error in POST postKoala()', error)
+      alert('Unable to add koala at this time. Please try again later.');
+    });
+}// end postKoala
