@@ -1,0 +1,31 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	margin: 0;
+}
+
+:root {
+	--header-color: #2ba0ff;
+}
+
+header {
+	background-color: var(--header-color);
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: max-content 1fr;
+}
+
+.header-info-container {
+	padding: 1rem;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	align-items: center;
+}
+
+.header-info-container * {
+	margin: 0;
+}
+
+.header-info-container h1 {
+	font-size: 3em;
+}
