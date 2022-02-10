@@ -6,6 +6,7 @@ body {
 
 :root {
 	--header-color: #2ba0ff;
+	--border-color: #dbdbdb;
 }
 
 header {
@@ -28,4 +29,24 @@ header {
 
 .header-info-container h1 {
 	font-size: 3em;
+}
+
+main {
+	padding: 1rem;
+}
+
+main table {
+	width: 100%;
+}
+
+main table,
+main th,
+main td {
+	border: 1px solid var(--border-color);
+	border-collapse: collapse;
+}
+
+main td,
+main th {
+	padding: 0.5rem;
 }
