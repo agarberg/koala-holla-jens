@@ -16,9 +16,12 @@ koalaRouter.get('/', (req, res) => {
 
 // POST
 koalaRouter.post('/', (req, res) => {
-
+    const newKoala = (req.body)
+    console.log(newKoala);
     
-    console.log(req.body);
+    const queryText = '';
+
+    // console.log(req.body); --- original code
 
     res.sendStatus(200)
 })
