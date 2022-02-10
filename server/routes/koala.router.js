@@ -5,10 +5,22 @@ const koalaRouter = express.Router();
 
 
 // GET
+koalaRouter.get('/', (req, res) => {
 
+    let successMessage = {
+        message: 'Success'
+    }
+
+    res.send(successMessage)
+})
 
 // POST
+koalaRouter.post('/', (req, res) => {
 
+    console.log(req.body);
+
+    res.sendStatus(200)
+})
 
 // PUT
 
