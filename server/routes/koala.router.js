@@ -1,9 +1,8 @@
 const express = require("express");
-const { Pool } = require("pg");
 const koalaRouter = express.Router();
 
 // DB CONNECTION
-
+const pool = require("../modules/pool");
 // GET
 koalaRouter.get("/", (req, res) => {
   // let successMessage = {
