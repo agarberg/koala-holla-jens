@@ -26,11 +26,11 @@ koalaRouter.get("/", (req, res) => {
 // POST
 
 koalaRouter.post('/', (req, res) => {
-    const newKoala = (req.body)
+    const newKoala = req.body
     console.log(newKoala);
     
     const queryText = `
-    INSERT INTO "allKoalas" ("name", "age", "gender", "transfer", "notes")
+    INSERT INTO "allKoalas" ("name", "age", "gender", "ready-for-transfer", "notes")
     VALUES ($1, $2, $3, $4, $5);
     `;
 
