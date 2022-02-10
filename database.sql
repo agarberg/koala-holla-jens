@@ -9,7 +9,7 @@ CREATE TABLE "allKoalas" (
  INSERT INTO "allKoalas"
  ("name", "gender", "age", "ready-for-transfer", "notes")
  VALUES
- ('Scotty', 'M', '4', 'Y', 'Birn in Guatemala'),
+ ('Scotty', 'M', '4', 'Y', 'Born in Guatemala'),
  ('Jean', 'F', '5','Y', 'Allergic to lots of lava'),
  ('Ororo', 'F', '7', 'N', 'Loves listening to Paula (Abdul)'),
  ('Logan', 'M', '15', 'N', 'Loves the sauna'),
