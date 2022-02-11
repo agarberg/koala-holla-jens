@@ -1,11 +1,16 @@
+-- create a database on hosted on localhost:5432
+
+-- Database must be named "koalas"
+
 CREATE TABLE "allKoalas" (
 	"id" SERIAL PRIMARY KEY,
 	"name" VARCHAR (30) NOT NULL,
 	"age" VARCHAR (100) NOT NULL,
 	"gender" VARCHAR (10) NOT NULL,
     "ready-for-transfer" BOOLEAN DEFAULT FALSE,
-    "notes" VARCHAR (100),
+    "notes" VARCHAR (100)
 );
+
  INSERT INTO "allKoalas"
  ("name", "gender", "age", "ready-for-transfer", "notes")
  VALUES
