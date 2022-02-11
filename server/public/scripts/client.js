@@ -15,21 +15,22 @@ function setupClickListeners() {
   // NOT WORKING YET :(
   // using a test object
 
-  // old code below
-  //     let koalaToSend = {
-  //       name: 'testName',
-  //       age: 'testName',
-  //       gender: 'testName',
-  //       readyForTransfer: 'testName',
-  //       notes: 'testName',
-  //     };
-  //     // call saveKoala with the new obejct
-  //     saveKoala( koalaToSend );
-  //   });
+    // old code below
+//     let koalaToSend = {
+//       name: 'testName',
+//       age: 'testName',
+//       gender: 'testName',
+//       readyForTransfer: 'testName',
+//       notes: 'testName',
+//     };
+//     // call saveKoala with the new obejct
+//     saveKoala( koalaToSend );
+//   }); 
 }
 
 function getKoalas() {
   console.log("in getKoalas");
+  $('#viewKoalas').empty();
   $.ajax({
     type: "GET",
     url: "/koalas",
@@ -69,7 +70,7 @@ function postKoala() {
     notes: $("#notesIn").val(),
   };
   $.ajax({
-    type: "POST",
+    method: "POST",
     url: "/koalas",
     data: koalaToAdd,
   })

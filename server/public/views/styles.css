@@ -7,6 +7,9 @@ body {
 :root {
 	--header-color: #2ba0ff;
 	--border-color: #dbdbdb;
+	--shadow: #00000073;
+	--button-hover: #2ba0ff;
+	--other-td: #eeeeee;
 }
 
 header {
@@ -49,4 +52,21 @@ main td {
 main td,
 main th {
 	padding: 0.5rem;
+}
+
+button {
+	padding: 0.5rem;
+	border-radius: 5px;
+	transition: all 0.1s;
+}
+
+button:hover {
+	/*   background: transparent; */
+	color: var(--button-hover);
+	transform: scale(1.1);
+	box-shadow: 0rem 0.1rem 0.2rem var(--shadow);
+}
+
+tr:nth-child(even) {
+	background-color: var(--other-td);
 }
