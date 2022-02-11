@@ -9,24 +9,24 @@ $(document).ready(function () {
 }); // end doc ready
 
 function setupClickListeners() {
-  $( '#addButton' ).on( 'click', postKoala);
-    console.log( 'in addButton on click' );
-    // get user input and put in an object
-    // NOT WORKING YET :(
-    // using a test object
+  $("#addButton").on("click", postKoala);
+  console.log("in addButton on click");
+  // get user input and put in an object
+  // NOT WORKING YET :(
+  // using a test object
 
-    // old code below
-//     let koalaToSend = {
-//       name: 'testName',
-//       age: 'testName',
-//       gender: 'testName',
-//       readyForTransfer: 'testName',
-//       notes: 'testName',
-//     };
-//     // call saveKoala with the new obejct
-//     saveKoala( koalaToSend );
-//   }); 
-// }
+  // old code below
+  //     let koalaToSend = {
+  //       name: 'testName',
+  //       age: 'testName',
+  //       gender: 'testName',
+  //       readyForTransfer: 'testName',
+  //       notes: 'testName',
+  //     };
+  //     // call saveKoala with the new obejct
+  //     saveKoala( koalaToSend );
+  //   });
+}
 
 function getKoalas() {
   console.log("in getKoalas");
@@ -84,10 +84,10 @@ function postKoala() {
 
       // append to DOM with a function here
       getKoalas();
-
-
-    }).catch(function(error) {
-      console.log('Error in POST postKoala()', error)
-      alert('Unable to add koala at this time. Please try again later.');
+    })
+    .catch(function (error) {
+      console.log("Error in POST postKoala()", error);
+      alert("Unable to add koala at this time. Please try again later.");
     });
-} // end postKoala
+}
+// end postKoala
