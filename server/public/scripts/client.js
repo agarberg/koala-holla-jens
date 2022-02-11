@@ -99,11 +99,10 @@ function postKoala() {
 
       // append to DOM with a function here
       getKoalas();
-
-
-    }).catch(function(error) {
-      console.log('Error in POST postKoala()', error)
-      alert('Unable to add koala at this time. Please try again later.');
+    })
+    .catch(function (error) {
+      console.log("Error in POST postKoala()", error);
+      alert("Unable to add koala at this time. Please try again later.");
     });
 } // end postKoala
 
